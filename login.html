@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparent login from Ui</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+     <div class="img">
+         <div class="content">
+             <header>Login From</header>
+             <from action="#">
+                 <div class="field">
+                     <span class="fa fa-user"></span>
+                     <input type="text" required placeholder="Email or Phone">
+                 </div>
+                 <div class="field space">
+                    <span class="fa fa-lock"></span>
+                    <input type="password" class="password" required placeholder="password">
+                    <snap class="show">SHOW</snap>
+                </div>
+                <div class="pass">
+                    <a href="#">forgot password?</a>
+                </div>
+                <div class="field">
+                    <input type="submit" value="LOGIN">
+                </div>
+                <div class="login">or login with</div>
+                <div class="link">
+                    <div class="facebook">
+                        <i class="fa fa-facebook-f"><span>Facebook</span></i>
+                    </div>
+                    <div class="instagram">
+                        <i class="fa fa-instagram"><span>instagram</span></i>
+                    </div>
+                </div>
+                <div class="signup">Don't have account?
+                    <a href="#">signup Now</a>
+                </div>
+             </from>
+
+         </div>
+
+     </div> 
+     <script>
+         const pass_field = document.querySelector('.password');
+         const show_btn = document.querySelector('.show');
+         show_btn.addEventListener('click',function(){
+             if(pass_field.type === "password"){
+                 pass_field.type = "text";
+                 show_btn.style.color = "#3498db";
+                 show_btn.textContent ="HIDE";
+             }else
+             pass_field.type = "password";
+             show_btn.style.color = "#222"; 
+             show_btn.textContent ="SHOW";
+         })
+     </script> 
+</body>
+</html>
